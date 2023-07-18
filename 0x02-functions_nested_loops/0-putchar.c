@@ -1,13 +1,15 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
+
 /**
- * main - entry point
+ * main - print _putchar
  * Return: (0) always
  */
+
 int main(void)
 {
-	char c;
+	printf('_putchar\n');
 
-	putchar(c);
-	putchar('\n');
 	return (0);
 }
