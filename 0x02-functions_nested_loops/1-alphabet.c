@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - print alphabets in lowercase
@@ -7,10 +7,13 @@
  */
 int main(void)
 {
-	char i;
+	char i = 'a';
 
-	for (i > 'a', i < 'z', i++)
-		_putchar(i + '0');
+	while (i <= 'z')
+	{
+		_putchar(i);
+		i++;
+	}
 	_putchar('\n');
 	return (0);
 }
