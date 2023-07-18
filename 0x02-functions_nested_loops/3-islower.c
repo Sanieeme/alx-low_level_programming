@@ -2,8 +2,10 @@
 
 /**
  * _islower - checks for lowercase alphabet
- * Return: 0 unless char is lowercase
+ * @c: parameter to be checked
+ * Return: 0 or 1
  */
+
 int _islower(int c)
 
 {
