@@ -3,7 +3,7 @@
  * main - entry point
  * Return: (0) always
  */
-char main(void)
+int main(void)
 {
 	char c;
 
