@@ -15,7 +15,7 @@ void print_times_table(int n)
 	{
 		for (i = n ; i <= 9 ; i++)
 		{
-			printf("%d, ", i);
+			printf("%d * %d = %d, ", i, n, i * n);
 		}
 			printf("\n");
 	}
