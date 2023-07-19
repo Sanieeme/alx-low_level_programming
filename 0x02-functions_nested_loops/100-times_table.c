@@ -28,9 +28,11 @@ void print_times_table(int n)
 		printf("\n");
 	}
 	else if (n >= 0 && n <= 144)
+	{
 		for (i = n ; i <= 144 ; i++)
 		{
 			printf("%d, ", i);
 		}
 		printf("\n");
+	}
 }
