@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int c;
+	unsigned long int a = 1;
+	unsigned long int b = 2;
+	unsigned long int c;
 	int j;
 
-	printf("%d, ", a);
+	printf("%lu, ", a);
 	for (j = 1 ; j < 50 ; j++)
 	{
-		printf("%d, ", b);
+		printf("%lu, ", b);
 		c = a + b;
 		a = b;
 		b = c;
