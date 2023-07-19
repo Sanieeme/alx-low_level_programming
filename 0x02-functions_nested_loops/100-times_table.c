@@ -16,20 +16,21 @@ void print_times_table(int n)
 		for (i = n ; i <= 9 ; i++)
 		{
 			printf("%d, ", i);
-			printf("\n");
 		}
+			printf("\n");
 	}
 	else if (n >= 0 && n <= 25)
 	{
 		for (i = n ; i <= 25 ; i++)
-		{	printf("%d, ", i);
-			printf("\n");
+		{
+			printf("%d, ", i);
 		}
+		printf("\n");
 	}
 	else if (n >= 0 && n <= 144)
 		for (i = n ; i <= 144 ; i++)
 		{
 			printf("%d, ", i);
-			printf("\n");
 		}
+		printf("\n");
 }
