@@ -18,9 +18,9 @@ int main(void)
 		c = a + b;
 		a = b;
 		b = c;
+		if (j != 49)
+			printf(", ");
 	}
-	if (j != 49)
-		printf("%lu, ", b);
 	printf("\n");
 	return (0);
 }
