@@ -16,7 +16,7 @@ int main(void)
 	while (c <= f)
 	{
 		c = a + b;
-		if (j % 2 == 0)
+		if (c % 2 == 0)
 			j = j + c;
 		a = b;
 		b = c;
