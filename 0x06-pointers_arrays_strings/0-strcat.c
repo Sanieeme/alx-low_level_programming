@@ -18,4 +18,5 @@ char *_strcat(char *dest, char *src)
 		destlen++;
 	for (i = 0 ; i <= srclen ; i++)
 		dest[destlen + i] = src[i];
+	return (dest);
 }
