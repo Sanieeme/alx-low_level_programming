@@ -4,19 +4,21 @@
  * _strstr - function that locates substring
  * @haystack: parameter
  * @needle: parmeter
- * Return: pointer or NULL
+ * Return: pointer or null
  */
 char *_strstr(char *haystack, char *needle)
 {
-	while (*haystack != '\0')
+	for ( ; *haystack != '\0' ; haystack++)
 	{
-		if (*haystack == *needle)
-			return (needle);
-		haystack++;
+		while (*haystack == *needle && *needle != '\0')
+		{
+			needle++;
+			haystack++;
+		}
+		if (*needle == '\0')
+			return (haystack);
 	}
-	if (*haystack == *needle)
-		return (needle);
-	return (NULL);
+	return ('\0');
 
 
 }
