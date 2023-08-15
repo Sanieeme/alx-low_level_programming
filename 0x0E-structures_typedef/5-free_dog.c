@@ -1,10 +1,12 @@
 #include <stdlib.h>
 #include "dog.h"
 
-/** free_dog - frees memory 
+/**
+ * free_dog - frees memory allocated
  * @d: struct to be freed
+ * Return: 0
  */
-void free_dog(dog_t*d)
+void free_dog(dog_t *d)
 {
 	if (d)
 	{
