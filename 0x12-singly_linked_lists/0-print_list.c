@@ -1,7 +1,5 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
 /**
  * print_list - function that prints all the elements
  * of a list_t list
@@ -11,7 +9,7 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned int size = 0;
+	size_t size = 0;
 
 	while (h)
 	{
