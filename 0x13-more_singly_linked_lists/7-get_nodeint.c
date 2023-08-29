@@ -9,17 +9,12 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *n_node = head;
-	
-	listint_t *e_node = malloc(sizeof(listint_t));
-	e_node->next = NULL;
+	unsigned int n = 0;
 
-	index--;
-	while (index != 1)
+	while (n_node && n < index)
 	{
 		n_node = n_node->next;
-		index--;
+		n++;
 	}
-	e_node->next = n_node->next;
-	n_node->next = e_node;
-	return (n_node);
+	return (NULL ? NULL : n_node);
 }
