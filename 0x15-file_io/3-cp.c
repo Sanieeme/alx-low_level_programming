@@ -32,12 +32,10 @@ int main(int argc, char **argv)
 		r1 = read(f2, buffer, BUF_SIZE);
 		if (r1 == 0)
 			break;
-		error_98(f2, buffer, argv[1]);
+		error_98(r1, buffer, argv[1]);
 
-		r2 = write(f1, buffer, BUF_SIZE);
-		if (r2 == 0)
-			break;
-		error_99(f1, buffer, argv[2]);
+		r2 = write(f1, buffer, r1);
+		error_99(r2, buffer, argv[2]);
 	} while (r2 >= BUF_SIZE);
 	r1 = close(f1);
 	error_100(r1, buffer);
