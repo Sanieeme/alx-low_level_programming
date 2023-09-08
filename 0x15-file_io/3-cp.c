@@ -36,6 +36,7 @@ int main(int argc, char **argv)
 
 		r2 = write(f1, buffer, r1);
 		error_99(r2, buffer, argv[2]);
+
 	} while (r2 >= BUF_SIZE);
 	r1 = close(f1);
 	error_100(r1, buffer);
@@ -54,7 +55,7 @@ void error_98(int f1, char *buffer, char *argv)
 {
 	if (f1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv);
 		free(buffer);
 		exit(98);
 	}
@@ -69,7 +70,7 @@ void error_99(int f1, char *buffer, char *argv)
 {
 	if (f1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv);
 		free(buffer);
 		exit(99);
 	}
@@ -83,7 +84,7 @@ void error_100(int f1, char *buffer)
 {
 	if (f1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %i\n", f1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", f1);
 		free(buffer);
 		exit(100);
 	}
