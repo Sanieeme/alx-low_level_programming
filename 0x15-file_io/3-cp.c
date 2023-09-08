@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 	} while (r2 >= BUF_SIZE);
 	r1 = close(f1);
 	error_100(r1, buffer);
-	r2 = close(f2);
+	r1 = close(f2);
 	error_100(r1, buffer);
 	free(buffer);
 	return (0);
