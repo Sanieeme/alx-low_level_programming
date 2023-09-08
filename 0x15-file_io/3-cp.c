@@ -17,13 +17,14 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 	buffer = malloc(sizeof(char) * BUF_SIZE);
-	if (buffer == NULL)
+	if (!buffer)
 		return (0);
 
 	f2 = open(argv[1], O_RDONLY);
 	error_98(f2, buffer, argv[1]);
-	f1 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	error_98(f1, buffer, argv[2]);
+
+	f1 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	error_99(f1, buffer, argv[2]);
 
 	do
 
@@ -32,11 +33,12 @@ int main(int argc, char **argv)
 		if (r1 == 0)
 			break;
 		error_98(f2, buffer, argv[1]);
-		r2 = read(f1, buffer, BUF_SIZE);
+
+		r2 = write(f1, buffer, BUF_SIZE);
 		if (r2 == 0)
 			break;
 		error_99(f1, buffer, argv[2]);
-	} while (r1 >= BUF_SIZE);
+	} while (r2 >= BUF_SIZE);
 	r1 = close(f1);
 	error_100(r1, buffer);
 	r2 = close(f2);
@@ -54,7 +56,7 @@ void error_98(int f1, char *buffer, char *argv)
 {
 	if (f1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv);
+		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv);
 		free(buffer);
 		exit(98);
 	}
@@ -83,7 +85,7 @@ void error_100(int f1, char *buffer)
 {
 	if (f1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: can't write to %d\n", f1);
+		dprintf(STDERR_FILENO, "Error: can't close fd %i\n", f1);
 		free(buffer);
 		exit(100);
 	}
