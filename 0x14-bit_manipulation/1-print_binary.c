@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 	{
 		num = n >> i;
 
-		if (nun & 1)
+		if (num & 1)
 		{
 			_putchar ('1');
 			size++;
