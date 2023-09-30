@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (i = 63; i >= 0; i--)
 	{
-		value = exclusive >> 1;
+		value = exclusive >> i;
 		if (value & 1)
 			size++;
 	}
