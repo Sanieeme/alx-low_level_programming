@@ -5,9 +5,9 @@
  * @text_content: content
  * Return: 1 or -1
  */
-int create_file(const char *filename, char *text_content);
+int create_file(const char *filename, char *text_content)
 {
-	int file, j, w, size= 0; 
+	int file, j, w, size = 0;
 
 	if (filename == NULL)
 		return (-1);
