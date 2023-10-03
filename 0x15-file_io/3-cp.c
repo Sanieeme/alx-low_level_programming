@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	char *buffer;
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage : cp file_from file _to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(97);
 	buffer = malloc(sizeof(char) * BUF_SIZE);
 	if (!buffer)
@@ -80,7 +80,7 @@ void error_100(int f1, char *buffer)
 {
 	if (f1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can' t close fd %d\n", f1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1);
 		free(buffer);
 		exit(100);
 	}
