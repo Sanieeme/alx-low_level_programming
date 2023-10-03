@@ -12,5 +12,6 @@ int append_text_to_file(const char *filename, char *text_content);
 void error_98(int f1, char *buffer, char *argv);
 void error_99(int f1, char *buffer, char *argv);
 void error_100(int f1, char *buffer);
+int main(int argc, char **argv);
 
 #endif
