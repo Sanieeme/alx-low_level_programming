@@ -12,8 +12,10 @@ int main(int argc, char **argv)
 	char *buffer;
 
 	if (argc != 3)
+	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(97);
+	}
 	buffer = malloc(sizeof(char) * BUF_SIZE);
 	if (!buffer)
 		return (0);
@@ -29,8 +31,10 @@ int main(int argc, char **argv)
 		if (r1 == 0)
 			break;
 		error_98(r1, buffer, argv[1]);
+
 		r2 = write(f1, buffer, r1);
 		error_99(r2, buffer, argv[2]);
+
 	} while (r2 >= BUF_SIZE);
 	r1 = close(f1);
 	error_100(r1, buffer);
