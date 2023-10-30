@@ -32,8 +32,7 @@ int main(int argc, char **argv)
 			break;
 		error_98(r1, buffer, argv[1]);
 		r2 = write(file1, buffer, r1);
-
-	error_99(r2, buffer, argv[2]);
+		error_99(r2, buffer, argv[2]);
 	} while (r2 >= BUF_SIZE);
 	r1 = close(file1);
 	error_100(r1, buffer);
