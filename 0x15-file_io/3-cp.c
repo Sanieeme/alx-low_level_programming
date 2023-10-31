@@ -66,7 +66,7 @@ void error_99(int file1, char *buffer, char *argv)
 {
 	if (file1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv);
 		free(buffer);
 		exit(99);
 	}
