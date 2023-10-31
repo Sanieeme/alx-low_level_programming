@@ -57,7 +57,7 @@ void error_98(int file1, char *buffer, char *argv)
 	}
 }
 /**
- * error_99 - function that checks error at 98
+ * error_99 - function that checks error at 99
  * @file1: parameter
  * @buffer: parameter
  * @argv: arg vector
@@ -72,7 +72,7 @@ void error_99(int file1, char *buffer, char *argv)
 	}
 }
 /**
- * error_100 - function that checks error at 98
+ * error_100 - function that checks error at 100
  * @file1: parameter
  * @buffer: parameter
  */
