@@ -9,6 +9,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *newnode;
 	unsigned int i = 0;
+
 	newnode = head;
 
 	while (newnode && i < index)
