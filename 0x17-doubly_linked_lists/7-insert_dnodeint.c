@@ -3,7 +3,7 @@
  * insert_dnodeint_at_index - function that inserts a new node
  * at a given position
  * @h: parameter
- * @indx: parameter
+ * @idx: parameter
  * @n: parameter
  * Return: address of new node or NULL
  */
