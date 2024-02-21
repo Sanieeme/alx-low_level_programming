@@ -7,13 +7,10 @@ def island_perimeter(grid):
 
     for i in range(r):
         for j in range(c):
-            if grid[i][j] == 1:
-                if j == 0 or grid[i][j - 1] == 0:
-                    peri += 1
-                if j == c -1 or grid[i][j + 1] == 0:
-                    peri += 1
-                if i == 0 or grid[i - 1][j] == 0:
-                    peri += 1
-                if i == r - 1 or grid[i +1][j] == 0:
-                    peri += 1
+            if grid[i][j] ==1:
+                peri += 4
+                if i > 0 and grid[i - 1][j] == 1:
+                    peri -= 2
+                if j > 0 and grid[i][j - 1] == 1:
+                    peri -= 2
     return peri
