@@ -10,7 +10,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *node; *temp;
+	hash_node_t *node, *temp;
 	char *new;
 
 	if (ht == NULL || key == NULL || *key == '\0')
@@ -18,9 +18,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 
-	index = hash_djb2((const unsigned char *)key) % ht->size;
+	index = hash_djb2((const unsigned char *)key, ht->size;
 	temp = ht->array[index];
-	while (temp)
+	while (temp != NULL)
 	{
 		if (strcmp(temp->key, key) == 0)
 		{
@@ -34,35 +34,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		temp = temp->next;
 	}
 
-	node = malloc(sizeof(hash_table_t));
+	node = make_hash_node(key, value);
 
 	if (node == NULL)
-	{
 		return (0);
-	}
-	node->key = strdup(key);
-
-	if (node->key == NULL)
-	{
-		free(node);
-		return (0);
-	}
-	node->value = strdup(value);
-	if (node->value == NULL)
-	{
-		free(node->key);
-		free(node);
-		return (0);
-	}
-	node->next = NULL;
-	if (ht->array[index] == NULL)
-	{
-		ht->array[index] = node;
-	}
-	else
-	{
-		node->next = ht->array[index];
-		ht->array[index] = node;
-	}
+	node->next = ht->array[index];
+	ht->array[index] = node;
 	return (1);
 }
